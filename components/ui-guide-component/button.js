@@ -3,6 +3,7 @@ const Button = (props) => {
 
     return (
         <div
+            role="button"
             style={{ fontFamily: 'Poppins-Regular' }}
             className={`flex justify-center items-center px-[20px] h-11 rounded-lg cursor-pointer
             ${type == 'primary' ? `bg-[#8A33FD] hover:bg-[#6620C1] active:bg-[#6620C1] text-white` :
