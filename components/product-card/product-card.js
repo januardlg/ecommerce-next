@@ -24,6 +24,8 @@ const ProductCard = (props) => {
 
     return (
         <div
+            role="button"
+            aria-label={`product container ${product.title}`}
             key={`product-${product.id}-${product.title}`}
             onClick={() => handleOpenProductDetail(product.id)}
             className="relative h-[315px] w-[227px] rounded-[16px] border border-[#EDEDED] text-black hover:border-[#008ECC] cursor-pointer hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]"
@@ -31,14 +33,14 @@ const ProductCard = (props) => {
 
             {product.discountPercentage > 0 && (
                 <div className="absolute top-[-1px] right-[-1px] h-[53px] w-[51px] bg-[#008ECC] rounded-tr-2xl rounded-bl-2xl flex items-center flex-wrap justify-center text-white text-sm">
-                    <div className="h-[30px] text-xs">
-                        <p>{`${discountDecimal(product.discountPercentage)}%`}</p>
+                    <div className="h-[30px] text-xs" >
+                        <p aria-label="discount">{`${discountDecimal(product.discountPercentage)}%`}</p>
                         <p>OFF</p>
                     </div>
                 </div>
             )}
             <div className="h-48 flex justify-center items-center ">
-                <Image src={`${product.thumbnail}`} className="rounded-t-2xl" alt="product-iamge" style={{
+                <Image src={`${product.thumbnail}`} alt={product.title} className="rounded-t-2xl" style={{
                     width: '99%',
                     height: '99%',
                 }} width={220} height={160} />
@@ -50,10 +52,10 @@ const ProductCard = (props) => {
                 {product.discountPercentage > 0 ?
                     (
                         <div className="flex mt-1">
-                            <p style={{ fontFamily: 'Poppins-Regular' }}>
+                            <p style={{ fontFamily: 'Poppins-Regular' }} aria-label="new-price">
                                 {rupiahCurrency(priceAfterDiscount)}
                             </p>
-                            <p style={{ fontFamily: 'Poppins-Regular' }} className="line-through ml-2 text-xs">
+                            <p style={{ fontFamily: 'Poppins-Regular' }} className="line-through ml-2 text-xs" aria-label="old-price">
                                 {rupiahCurrency(product.price)}
                             </p>
                         </div>

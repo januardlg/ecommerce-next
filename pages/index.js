@@ -34,7 +34,7 @@ export default function Home(props) {
 
       <FeaturedProductSection featuredProducts={featuredProducts} goToProductsPage={goToProductsPage} />
 
-      <CategoryProductSection categories={categories} goToCategoriesPage={goToCategoriesPage} /> 
+      <CategoryProductSection categories={categories} goToCategoriesPage={goToCategoriesPage} />
 
     </>
   )
