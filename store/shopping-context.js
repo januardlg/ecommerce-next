@@ -96,7 +96,7 @@ export function ShoppingContextProvider(props) {
             address: '',
             deliveryCharges: 3,
             estimatedDeliveryDate: moment('2023-09-24T08:00:00+07:00'),
-            totalBill:93,
+            totalBill: 93,
             items: [
                 {
                     shoppingCartId: 1,

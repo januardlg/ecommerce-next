@@ -48,8 +48,8 @@ describe('Product Card', () => {
         render(<ProductCard product={mockData} />)
 
         const productContainer = screen.getByRole('button', { name: /product container/i })
-        await userEvent.click(productContainer)
 
+        await userEvent.click(productContainer)
         expect(push).toHaveBeenCalledWith('/products/28')
 
     })

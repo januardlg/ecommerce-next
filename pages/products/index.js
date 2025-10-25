@@ -14,10 +14,6 @@ const Products = (props) => {
 
     const { routerPath } = useContext(ShoppingContext)
 
-
-
-
-
     // all products state
     const [products, setProducts] = useState([])
 
@@ -34,7 +30,7 @@ const Products = (props) => {
         /**BreadCrumb Path */
         ProductsPageRoute.disable = true
         routerPath.push(ProductsPageRoute)
-      
+
     }, [])
 
     // fetch data and load more functionality
@@ -54,16 +50,16 @@ const Products = (props) => {
     return (
         <>
             <BreadCrumb />
-            <div class="grid grid-cols-5 gap-4">
-                {products.map((product, index) => (
-                    <ProductCard product={product} />
+            <div className="grid grid-cols-5 gap-4">
+                {products.length > 0 && products.map((product, index) => (
+                    <ProductCard product={product} key={product.id} />
                 ))}
             </div>
             {isLoading && (
                 <>
-                    <div class="grid grid-cols-5 gap-4">
+                    <div className="grid grid-cols-5 gap-4">
                         {[0, 1, 2, 3, 4].map((index) => (
-                            <ProductCardSkeleton index={index} />
+                            <ProductCardSkeleton index={index} key={index} />
                         ))}
                     </div>
                 </>
@@ -71,7 +67,7 @@ const Products = (props) => {
 
             {!isLoading && stillMore &&
                 <div className='flex justify-center'>
-                    <div className='text-[#666666] mt-6 rounded-md border-[1px] border-[#008ECC] hover:border-[#2F80ED] hover:border-[1.5px] hover:text-[#222222] w-[200px] h-[40px] cursor-pointer flex justify-center items-center ' onClick={loadMoreProducts}>
+                    <div className='text-[#666666] mt-6 rounded-md border-[1px] border-[#008ECC] hover:border-[#2F80ED] hover:border-[1.5px] hover:text-[#222222] w-[200px] h-[40px] cursor-pointer flex justify-center items-center ' onClick={loadMoreProducts} role='button' aria-label='more'>
                         <p style={{ fontFamily: 'Poppins-Regular' }} className="text-[14px]">Load More Products</p>
                     </div>
                 </div>}

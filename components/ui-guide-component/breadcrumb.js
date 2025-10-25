@@ -19,10 +19,11 @@ const BreadCrumb = () => {
     }
 
     return (
-        <div className={`flex items-center mb-8`}>
+        <div className={`flex items-center mb-8`} role="link" aria-label="breadcrumbs">
             {routerPath.map((path, index) => (
                 <div className={`flex text-[#807D7E] items-center`}
                     style={{ fontFamily: FONT_FAMILY.POPPINS_REGULAR }}
+                    key={path.path}
                 >
                     <div
                         onClick={path.disable ? undefined : () => handleChangePage(path.path)}
