@@ -4,16 +4,14 @@ const ProductCardList = (props) => {
 
     const { products } = props
 
-    if(!products){
-        return 
+    if (!products) {
+        return
     }
     return (
         <>
-            <div className="flex">
+            <div className="flex gap-4">
                 {products.map((product) => (
-                    <div className="mr-4">
-                        <ProductCard product={product} />
-                    </div>
+                    <ProductCard product={product} key={product.id} />
                 ))}
             </div>
         </>
