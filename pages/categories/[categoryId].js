@@ -34,7 +34,7 @@ const ProductOfCategory = (props) => {
 
             /**BreadCrumb Path */
             const categoryDetail = {
-                text: params.categoryId,
+                text: readableCategory(params.categoryId),
                 path: `/${ROUTER_CONST.categories}/${params.categoryId}`,
                 disable: true
             }
