@@ -8,7 +8,7 @@ import { ShoppingContext } from "@/store/shopping-context"
 
 import CHECKOUT_STATUS from "@/data-connector/constants/checkout-constants"
 import { ROUTER_CONST } from "@/Consants/RouterConst"
-import { CheckouPageRoute } from "@/Consants/RouterConst"
+// import { CheckouPageRoute } from "@/Consants/RouterConst"
 
 import PersonalInformation from "@/components/checkout-transactions/personal-information"
 import PaymentMethod from "@/components/checkout-transactions/payment-method"
@@ -18,7 +18,7 @@ import ShippingAddress from "@/components/checkout-transactions/shipping-address
 import ShippingMethod from "@/components/checkout-transactions/shipping-method"
 import ModalDialog from "@/components/ui-guide-component/modal-dialog"
 import Button from "@/components/ui-guide-component/button"
-import BreadCrumb from "@/components/ui-guide-component/breadcrumb"
+// import BreadCrumb from "@/components/ui-guide-component/breadcrumb"
 import WarningForm from "@/components/ui-guide-component/warning-form"
 
 import addedToCartAnimation from "../../public/animations/checkout-success"
@@ -35,15 +35,15 @@ const CheckoutTransactions = (props) => {
 
     const [isOrderModalOpen, setIsOrderModalOpen] = useState(false)
 
-    const initValue = {
-        firstName: "",
-        lastName: "",
-        phone: "",
-        addressLabel: "",
-        city: "",
-        postCode: "",
-        address: ""
-    }
+    // const initValue = {
+    //     firstName: "",
+    //     lastName: "",
+    //     phone: "",
+    //     addressLabel: "",
+    //     city: "",
+    //     postCode: "",
+    //     address: ""
+    // }
 
     const [shippingAdress, setShippingAddress] = useState({})
 
