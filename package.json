@@ -2,6 +2,9 @@
   "name": "ecommerce-next",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev -p 3008",
     "build": "next build",
