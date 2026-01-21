@@ -23,7 +23,7 @@ import WarningForm from "@/components/ui-guide-component/warning-form"
 
 import addedToCartAnimation from "../../public/animations/checkout-success"
 
-import { Player } from "@lottiefiles/react-lottie-player"
+// import { Player } from "@lottiefiles/react-lottie-player"
 
 
 const CheckoutTransactions = (props) => {
@@ -146,12 +146,12 @@ const CheckoutTransactions = (props) => {
                 // handlePrimaryAction={goToOrdersPage}
                 body={
                     <div>
-                        <Player
+                        {/* <Player
                             autoplay
                             loop
                             src={addedToCartAnimation}
                             style={{ height: '300px', width: '100%' }}
-                        />
+                        /> */}
                         <div className="flex justify-center ">
                             <p style={{ fontFamily: 'Poppins-Regular' }} className="text-black"> Please do payment before <br /> {moment(checkoutTransaction.checkoutTime).add(2, 'hours').format('DD MMMM YYYY, h:mm a')} </p>
                         </div>
